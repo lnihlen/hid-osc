@@ -3,5 +3,5 @@ set(hid_osc_files
 )
 
 add_executable(hid-osc ${hid_osc_files})
-target_link_libraries(hid-osc oscpack)
+target_link_libraries(hid-osc oscpack hidapi)
 
