@@ -4,13 +4,13 @@
 #include "gflags/gflags.h"
 #include "hidapi.h"
 
+#include "hid_osc_packet_listener.h"
+
 DEFINE_int32(udp_port_number, 4636,
   "UDP port to bind for incoming OSC requests.");
 
 int main(int argc, char* argv[]) {
   gflags::ParseCommandLineFlags(&argc, &argv, true);
-
-  printf("hid-osc listening on port %d\n", FLAGS_udp_port_number);
 
   // Initialize hidapi library.
   int res = hid_init();
